@@ -5,9 +5,9 @@ from matplotlib import pyplot as plt
 """ 
 Generate 100 examples for each class (each class conditional density is normal)
 """
-def generate_examples(classess,num_of_examples = 100):
+def generate_examples(classes,num_of_examples = 100):
     dataset = []
-    for c in classess:
+    for c in classes:
         X = np.random.normal(2*c, 1, num_of_examples)
         for x in X:
             dataset.append((x, c))
