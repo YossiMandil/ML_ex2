@@ -3,7 +3,7 @@ import math as math
 from matplotlib import pyplot as plt
 
 """ 
-generate 100 examples for each class (each class conditional density is normal)
+Generate 100 examples for each class (each class conditional density is normal)
 """
 def generate_examples(classess,num_of_examples = 100):
     dataset = []
@@ -16,7 +16,7 @@ def generate_examples(classess,num_of_examples = 100):
 
 
 """
-returns a n-dim array that in the index i there is the softmax for class i
+Returns a n-dim array that in the index i there is the softmax for class i
 """
 
 def calculate_softmax(x,W,b):
@@ -27,7 +27,7 @@ def calculate_softmax(x,W,b):
 
 
 """
-calculates probability density function
+Calculates probability density function
 """
 def calculate_PDF(x,mean,variance=1):
     #pdf
@@ -35,7 +35,7 @@ def calculate_PDF(x,mean,variance=1):
 
 
 """
-train the examples with lr and run it num_of_iteration times
+Train the examples with lr and run it num_of_iteration times
 """
 def train(examples, lr=0.1, num_of_iterations=30, num_of_classes=3):
         W = np.zeros(num_of_classes)
